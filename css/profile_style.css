@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+body,
+h1,
+p,
+div,
+img,
+table,
+header,
+footer {
+  margin: 0;
+}
+
+body {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1.2;
+  color: #0032e1;
+}
+
+/* preview */
+
+#moving{
+    background-image: url("../images/pexels-laura-tancredi-7078486.jpeg");
+    position:relative;
+    animation: movebg 20s linear infinite;
+}
+
+@keyframes movebg {
+  0% {background-position: 0 center;}
+  100% {background-position: -1000px center;}
+}
+
+
+#preview {
+  font-size: 200px;
+  text-decoration: line-through;
+  line-height: 1;
+  margin: 10% 8%;
+}
+
+#next {
+  display: block;
+  float: right;
+  color: #ccc;
+  font-size: 70px;
+  margin: -10% 10% 0;
+}
+#next:hover {
+  color: black;
+}
+
+/* about */
+
+header .gnb {
+  display: fixed;
+  background-color: aqua;
+  position: fixed;
+}
+
+div #gnb_logo {
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+div #gnb_list {
+  display: block;
+  float: right;
+  padding-right: 40px;
+  margin: 30px 0;
+}
+
+#gnb_list li {
+  display: inline;
+  padding-left: 30px;
+  font-size: 14px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center; /*콘텐츠 중앙정렬*/
+  height: 750px;
+  clear: both;
+  border-top: 1px #ccc solid;
+}
+
+#container {
+  font-family: "나눔바른고딕", "나눔고딕", "Nanum Barun Gothic", "gothic", Arial,
+    Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin: 100px;
+  /*border: 1px #ccc solid; 영역확인*/
+}
+
+img {
+  height: 400px;
+  margin-right: 20px;
+  border: #ccc 1px solid;
+}
+
+table{
+  width: 800px;
+  height: 300px;
+}
+tr {
+  padding: 20px;
+}
+
+
+/*footer*/
+
+.footer p {
+  background-color: rgb(49, 49, 49);
+  color: #fff;
+  font-size: 12px;
+  padding: 20px;
+  text-align: right;
+}
