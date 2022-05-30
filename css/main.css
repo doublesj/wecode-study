@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+/* defalt */
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+}
+
+/*css 변수 설정*/
+:root {
+  --text-color: #333;
+  --accent-color: #0037ff;
+  --background-color: #cdcdcd;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 1.2;
+}
+
+/* header start */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.gnb {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  color: var(--background-color);
+  border-bottom: 1px solid var(--background-color);
+}
+
+.gnb__logo {
+  margin-left: 40px;
+  font-size: 2.5em;
+}
+
+.gnb__list {
+  display: flex;
+  list-style: none;
+  padding-right: 40px;
+  margin: 30px 0;
+}
+
+.gnb__list li {
+  padding-left: 40px;
+  font-size: 1.5em;
+}
+
+/* header end */
+
+/* intro moving */
+
+.intro {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/pexels-makjp-10114800.jpeg");
+  background-repeat: no-repeat;
+  animation: movebg 5s linear;
+  animation-iteration-count: 1; /* 애니메이션의 반복을 infinite에서 횟수로 제어*/
+  animation-fill-mode: forwards; /* 애니메이션 100%완료 시점에서 멈추기 */
+  color: var(--accent-color);
+  height: 100vh;
+}
+
+@keyframes movebg {
+  0% {
+    background-position: 0px center;
+  }
+  100% {
+    background-position: -300px center;
+  }
+}
+
+#preview {
+  font-size: 10vw; /* vw화면사이즈에 따라 폰트사이즈 조절*/
+  text-decoration: line-through;
+  line-height: 1;
+  margin: 150px 0;
+}
+
+#arrow {
+  color: var(--accent-color-);
+  font-size: 5vw;
+}
+#arrow:hover {
+  color: var(--background-color);
+}
+
+/* intro moving end */
+
+/* main start */
+
+main {
+  display: flex;
+  flex-direction: column;
+  font-family: "나눔바른고딕", "나눔고딕", "Nanum Barun Gothic", "gothic", Arial,
+    Helvetica, sans-serif;
+  font-size: 1.5em;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+.container2 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+#container2__text {
+  padding:0 5%;
+}
+#container2__img {
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+}
+#container2__imgsrc {
+  width: 120%;
+  object-fit: contain;
+}
+
+
+.container3 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0 10%;
+}
+#container3__project {
+  text-align: center;
+}
+#container3__box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 5% 0;
+}
+
+#container3__box .box {
+  width: 25vw;
+  height: 15vw;
+  background-color: var(--accent-color);
+}
+
+h1 {
+  font-size: 3vw;
+  margin-bottom: 30px;
+}
+
+.container4 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+#container4__contact {
+  text-align: center;
+  margin: 0 10%;
+}
+#container4__box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:center;
+  width: 100%;
+  margin: 5% 0;
+}
+
+#container4__box .box {
+  width: 5vw;
+  height: 5vw;
+  margin: 0 20px;
+  background-color: var(--text-color);
+  text-align: center;
+}
+
+
+/* main end  */
+
+/* footer start */
+
+footer {
+  display: flex;
+  justify-content: right;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  font-size: 0.8vw;
+  padding: 20px;
+}
+
+/* footer end */

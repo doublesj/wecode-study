@@ -5,55 +5,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <title>About</title>
+    <title>About Doublesj</title>
 
-    <link rel="stylesheet" href="css/profile_style.css" ;>
+    <link rel="stylesheet" href="css/main.css" ;>
+
 
 </head>
 
 <body>
+    <!-- 인트로 페이지 분할을 하나로 통합 재작업 -->
     <div id="warp">
-
-        <!-- gnb -->
-        <header class="gnb">
-            <div>
-                <h1 id="gnb_logo">
-                    <a href="./doublesj_profile.html" target="_self">doublesj</a>
-                </h1>
-                <ul id="gnb_list">
-                    <li><a href="#" target="_self">About</a></li>
-                    <li><a href="#" target="_self">Project</a></li>
-                    <li><a href="#" target="_self">Contact</a></li>
+        <header>
+            <nav class="gnb">
+                <div class="gnb__logo">
+                    <a href="doublesj_about.html" target="_self">doublesj</a>
+                </div>
+                <ul class="gnb__list">
+                    <!-- 페이지 안에서 이동 할 수 있는 구조를 만들어보자 -->
+                    <li><a href="#container2">About</a></li>
+                    <li><a href="#container3">Project</a></li>
+                    <li><a href="#container4">Contact</a></li>
                 </ul>
-            </div>
+                    <!-- 페이지 스크롤 시 어두운 배경에서 gnb영역의 배경컬러 생성방법? 어떻게 하면 될까? -->
+            </nav>
         </header>
 
-        <!-- main container -->
-        <main class="container">
-            <div class="container" id="container">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td class="container_img"><img src="./images/IMG_7666.jpg" alt="container_image"></td>
-                            </td>
-                            <td>
-                               아무것도없지뤂
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
 
-            </div>
+        <!-- main container -->
+        <main>
+            <a name="container1"></a>
+            <article class="container1">
+                <div class="intro">
+                    <p id="preview">When in doubt,<br>choose change.</p>
+                    <a href="#container2"><span class="iconify" data-icon="ph:arrow-down-light" id="arrow"></span></a>
+                    <a href="#container2">
+                        <p>scroll</p>
+                    </a>
+                </div>
+            </article>
+            <a name="container2"></a>
+            <article class="container2">
+             <!-- container2__text와 container2__img flex의 flex-grow 이용하고 싶었는데 적용 실패. retry해보자!-->
+                <div id="container2__text">
+                    <h1>Who is she</h1>
+                    <p>Soo jung, Shin</p>
+                    <p>doublesj1226@gmail.com</p>
+                    <p>010-2649-3806</p><br>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                </div>
+                <div id="container2__img">
+                    <img src="../0522_introduce/images/IMG_5956.jpg" id="container2__imgsrc" alt="soojung">
+                </div>
+            </article>
+            <a name="container3"></a>
+            <article class="container3">
+                <div id="container3__project">
+                    <h1>Project</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                </div>
+                <div id="container3__box">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div id="container3__project">
+                    <p>+ more</p>
+                </div>
+            </article>
+            <a name="container4"></a>
+            <article class="container4">
+                <div id="container4__contact">
+                    <h1>Contact</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                </div>
+                <div id="container4__box">
+                    <div class="box">icon</div>
+                    <div class="box">icon</div>
+                    <div class="box">icon</div>
+                </div>
+            </article>
         </main>
 
         <!-- footer -->
         <footer>
-            <div class="footer">
-                <p>© 2022 doublesj. All Rights Reserved.</p>
-            </div>
-        </footer>
+            <nav class="footer">
+                <div>
+                    <p>© 2022 doublesj. All Rights Reserved.</p>
 
+                </div>
+            </nav>
+        </footer>
     </div>
+
+    <!--화살표 아이콘 불러옴-->
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
 </body>
 
 </html>
