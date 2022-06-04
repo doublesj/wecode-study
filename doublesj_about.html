@@ -7,26 +7,28 @@
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <title>About Doublesj</title>
 
-    <link rel="stylesheet" href="css/main.css";>
+    <link rel="stylesheet" href="css/main.css" ;>
+
+    <!--iconify-->
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 
 
 </head>
 
 <body>
-    <!-- 인트로 페이지 분할을 하나로 통합 재작업 -->
     <div id="warp">
+
+        <!-- header -->
         <header>
             <nav class="gnb">
                 <div class="gnb__logo">
                     <a href="doublesj_about.html" target="_self">doublesj</a>
                 </div>
                 <ul class="gnb__list">
-                    <!-- 페이지 안에서 이동 할 수 있는 구조를 만들어보자 -->
                     <li><a href="#container2">About</a></li>
                     <li><a href="#container3">Project</a></li>
                     <li><a href="#container4">Contact</a></li>
                 </ul>
-                    <!-- 페이지 스크롤 시 어두운 배경에서 gnb영역의 배경컬러 생성방법? 어떻게 하면 될까? -->
             </nav>
         </header>
 
@@ -45,38 +47,52 @@
             </article>
             <a name="container2"></a>
             <article class="container2">
-             <!-- container2__text와 container2__img flex의 flex-grow 이용하고 싶었는데 적용 실패. retry해보자!-->
-                <div id="container2__text">
+                <div class="item">
                     <h1>Who is she</h1>
                     <p>Soo jung, Shin</p>
                     <p>doublesj1226@gmail.com</p>
-                    <p>010-2649-3806</p><br>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                    <p>010-2649-3806</p>
+                    <br>
+                    <p id="sentence">저는 도전을 좋아합니다.<br><br>약 10년 동안 콘텐츠 디자인을 해오며 디자인의 세계와 돈독한 관계를 유지했습니다. 마케팅팀에 속해 새로운 것을 기획하고, 만들며 사람들의 흥미를 유도하는 일이 즐거웠습니다.<br>더 다양한 콘텐츠 제작에 흥미가 생겼고 html 마크업부터 영상 촬영과 편집 디자인까지 디자인 영역을 확장시켰습니다.<br><br>
+                        이번에는 또 다른 영역에 도전해 보고자 합니다.<br>개발도 가능한 디자이너가 되면 어떨까? 아니, 개발자가 되어보자.<br><br>
+                        When in doubt, choose change.<br>저는 변화를 선택했습니다. wecode를 통해 Front-end 개발자로 성장해 다음에는 디자이너 신수정이 아닌 개발자 신수정으로 소개하는 날이 곧 오기를 기대합니다.</p>
                 </div>
-                <div id="container2__img" alt="soojung">
-                    <!-- <img src="../0522_introduce/images/IMG_5956.jpeg" id="container2__imgsrc" alt="soojung">-->
+                <div class="item">
+                    <div class="slidephoto">
+                        <img src="../0522_introduce/images/IMG_5956.jpeg" alt="slidephoto1" id="slidephoto">
+                        <img src="../0522_introduce/images/IMG_8772.jpg" alt="slidephoto2" id="slidephoto">
+                        <img src="../0522_introduce/images/IMG_8703.jpg" alt="slidephoto3" id="slidephoto">
+                    </div>
                 </div>
+                <!--slidephoto script-->
+                <script src="../0522_introduce/js/slidephoto.js"></script>
             </article>
             <a name="container3"></a>
             <article class="container3">
                 <div id="container3__project">
                     <h1>Project</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                    <p id="sentence">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                        eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                        commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
                 </div>
-                <div id="container3__box">
+                <div id="container3__slide">
                     <div class="box"></div>
                     <div class="box"></div>
                     <div class="box"></div>
                 </div>
-                <div id="container3__project">
+                <!-- <div id="container3__project">
                     <p class="buttonTxt">+ more</p>
-                </div>
+                </div> -->
             </article>
             <a name="container4"></a>
             <article class="container4">
                 <div id="container4__contact">
                     <h1>Contact</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                    <p id="sentence">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                        eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                        commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
                 </div>
                 <div id="container4__box">
                     <div class="box">icon</div>
@@ -97,8 +113,7 @@
         </footer>
     </div>
 
-    <!--화살표 아이콘 불러옴-->
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
 
 </body>
 

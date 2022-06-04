@@ -2,27 +2,82 @@
 
 /* defalt */
 
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&display=swap");
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix")
+      format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff")
+      format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff")
+      format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 300;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff")
+      format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf")
+      format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-family: "Playfair Display", serif;
 }
 
 /*css 변수 설정*/
 :root {
   --text-color: #333;
   --accent-color: #0037ff;
-  --background-color: #cdcdcd;
+  --background-color: #cecece;
 }
 
 body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 200;
   line-height: 1.2;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+#sentence {
+  font-family: "NanumBarunGothic", "Franklin Gothic Medium", "Arial Narrow",
+    Arial, "나눔바른고딕", "고딕", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.8;
 }
 
 /* header start */
@@ -32,7 +87,7 @@ a {
   text-decoration: none;
 }
 .buttonTxt {
-  font-size: 2.5em;
+  font-size: 2rem;
 }
 .gnb {
   width: 100%;
@@ -43,11 +98,12 @@ a {
   padding: 5px;
   color: var(--background-color);
   border-bottom: 1px solid var(--background-color);
+  z-index: 100;
 }
 
 .gnb__logo {
   margin-left: 40px;
-  font-size: 2.5em;
+  font-size: 1.7rem;
 }
 
 .gnb__list {
@@ -59,7 +115,7 @@ a {
 
 .gnb__list li {
   padding-left: 40px;
-  font-size: 1.5em;
+  font-size: 1rem;
 }
 
 /* header end */
@@ -77,6 +133,7 @@ a {
   justify-content: center;
   align-items: center;
   background-image: url("../images/pexels-makjp-10114800.jpeg");
+  background-size: 200%;
   background-repeat: no-repeat;
   animation: movebg 5s linear;
   animation-iteration-count: 1; /* 애니메이션의 반복을 infinite에서 횟수로 제어*/
@@ -98,12 +155,12 @@ a {
   font-size: 10vw; /* vw화면사이즈에 따라 폰트사이즈 조절*/
   text-decoration: line-through;
   line-height: 1;
-  margin: 150px 0;
+  margin: 100px 0;
 }
 
 #arrow {
   color: var(--accent-color-);
-  font-size: 5vw;
+  font-size: 3rem;
 }
 #arrow:hover {
   color: var(--background-color);
@@ -118,43 +175,36 @@ main {
   flex-direction: column;
   font-family: "나눔바른고딕", "나눔고딕", "Nanum Barun Gothic", "gothic", Arial,
     Helvetica, sans-serif;
-  font-size: 1.5em;
   line-height: 1.6;
   color: var(--text-color);
 }
+
 .container2 {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: flex-start;
   height: 100vh;
 }
 
-#container2__text {
-  padding:0 5%;
+.item:nth-child(1) {
+  align-self: center;
+  padding: 5rem;
 }
-
-#container2__img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 180%;
-  height: 100vh;
-  background-image: url("../images/IMG_5956.jpeg");
-  background-size:cover;
-}
-
-
-/* #container2__img {
+.item:nth-child(2) {
+  width: 100%;
   height: 100vh;
   overflow: hidden;
-  margin: 0 auto;
+  position: relative;
 }
-#container2__imgsrc {
-  width: 120%;
-  object-fit: contain;
-} */
 
+.slidephoto {
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+}
+
+.slidephoto > img {
+  height:100vh;
+}
 
 .container3 {
   display: flex;
@@ -167,7 +217,7 @@ main {
 #container3__project {
   text-align: center;
 }
-#container3__box {
+#container3__slide {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -176,15 +226,10 @@ main {
   margin: 5% 0;
 }
 
-#container3__box .box {
+#container3__slide .box {
   width: 25vw;
   height: 15vw;
   background-color: var(--accent-color);
-}
-
-h1 {
-  font-size: 3vw;
-  margin-bottom: 30px;
 }
 
 .container4 {
@@ -204,7 +249,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   width: 100%;
   margin: 5% 0;
 }
@@ -217,7 +262,6 @@ h1 {
   text-align: center;
 }
 
-
 /* main end  */
 
 /* footer start */
@@ -227,7 +271,7 @@ footer {
   justify-content: right;
   background-color: var(--text-color);
   color: var(--background-color);
-  font-size: 0.8vw;
+  font-size: 1rem;
   padding: 20px;
 }
 
