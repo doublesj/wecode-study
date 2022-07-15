@@ -1,1 +1,1 @@
-# wecode-study
+# wecode
